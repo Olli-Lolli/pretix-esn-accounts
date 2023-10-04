@@ -13,7 +13,7 @@ def add_team_auto_assign_to_nav_pane(sender, request, **kwargs):
     """
     return [
         {
-            "label": _("ESN Accounts team assignment"),
+            "label": _("ESN team assignment"),
             "url": reverse(
                 "plugins:pretix_esn_accounts:team_assignment_rules",
                 kwargs={"organizer": request.organizer.slug},
