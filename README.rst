@@ -1,5 +1,5 @@
 Pretix ESN Accounts SSO Plugin
-==========================
+================================
 
 This is a plugin for `pretix`_ that provides an authentication backend for `ESN Accounts`_
 It allows you to define rules to assign users automatically to teams based on their role in ESN.

@@ -1,7 +1,7 @@
 [project]
 name = "pretix-esn-accounts"
 dynamic = ["version"]
-description = "This is a plugin for pretix that provides an authentication backend for ESN Accounts SSO and allows to define rules to assign users automatically to teams based on their role in ESN"
+description = "Plugin for pretix with an authentication backend for ESN Accounts SSO"
 readme = "README.rst"
 license = {text = "Apache"}
 keywords = ["pretix"]
@@ -10,6 +10,12 @@ authors = [
 ]
 maintainers = [
     {name = "Oliver Fuhr", email = "oliver.fuhr@tu-dortmund.de"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
 ]
 
 dependencies = [
