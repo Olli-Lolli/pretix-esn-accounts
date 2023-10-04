@@ -1,0 +1,45 @@
+[project]
+name = "pretix-esn-accounts"
+dynamic = ["version"]
+description = "This is a plugin for pretix that provides an authentication backend for ESN Accounts SSO and allows to define rules to assign users automatically to teams based on their role in ESN"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "Oliver Fuhr", email = "oliver.fuhr@tu-dortmund.de"},
+]
+maintainers = [
+    {name = "Oliver Fuhr", email = "oliver.fuhr@tu-dortmund.de"},
+]
+
+dependencies = [
+    "python-cas ~= 1.6.0",
+    "aenum >= 3.1.10",
+    "django-multiselectfield ~= 0.1.12"
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_esn_accounts = "pretix_esn_accounts:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "https://github.com/Olli-Lolli/pretix-esn-accounts/"
+repository = "https://github.com/Olli-Lolli/pretix-esn-accounts/"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretix_esn_accounts.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false

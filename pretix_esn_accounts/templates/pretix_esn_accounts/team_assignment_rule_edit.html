@@ -1,0 +1,23 @@
+{% extends "pretixcontrol/organizers/base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% block inner %}
+    {% if url_name == "team_assignment_rules.edit" %}
+        <h1>{% trans "Modify team assignment rule" %}</h1>
+    {% else %}
+        <h1>{% trans "Create team assignment rule" %}</h1>
+    {% endif %}
+        <p>{% trans "BE AWARE: Users are not removed from teams when the associated assignment rule is removed" %}</p>
+    <form class="form-horizontal" action="" method="post">
+        {% csrf_token %}
+        {% bootstrap_form_errors form %}
+        {% bootstrap_field form.team layout="control" %}
+        {% bootstrap_field form.esn_section layout="control" %}
+        {% bootstrap_field form.local_roles layout="control" %}
+        <div class="form-group submit-group">
+            <button type="submit" class="btn btn-primary btn-save">
+                {% trans "Save" %}
+            </button>
+        </div>
+    </form>
+{% endblock %}

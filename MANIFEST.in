@@ -1,0 +1,5 @@
+recursive-include pretix_esn_accounts/static *
+recursive-include pretix_esn_accounts/templates *
+recursive-include pretix_esn_accounts/locale *
+include LICENSE
+exclude .gitlab-ci.yml

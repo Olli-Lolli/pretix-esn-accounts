@@ -1,0 +1,5 @@
+[plugin]
+package = "pretix-esn-accounts"
+modules = [ "pretix_esn_accounts" ]
+marketplace_name = "esn-accounts"
+
